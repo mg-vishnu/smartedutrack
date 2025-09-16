@@ -1,1 +1,3 @@
 djangorestframework
+pillow
+psycopg2
