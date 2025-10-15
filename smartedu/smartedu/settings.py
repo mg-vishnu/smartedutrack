@@ -44,7 +44,18 @@ INSTALLED_APPS = [
     'teachers',
     'attendance',
     'assignments',
+    'rest_framework.authtoken',
+    'task',
+    'performance'
+    
 ]
+
+REST_FRAMEWORK={
+    'DEFALUT_AUTHONTICATION_CLASSES':(
+        'rest_framework_simplejwt.authontication.JWTAUThontication',
+        ),
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -131,4 +142,4 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-AUTH_USER_MODEL = 'accounts.User'
+AUTH_USER_MODEL = "accounts.User"
